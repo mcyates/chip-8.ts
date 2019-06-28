@@ -1,0 +1,29 @@
+{
+	"name": "chip-8.ts",
+	"version": "1.0.0",
+	"description": "A chip-8 interpreter implemented with typescript",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/M-C-Yates/chip-8.ts.git"
+	},
+	"keywords": [
+		"Typescript",
+		"chip-8"
+	],
+	"author": "Matthew Yates",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/M-C-Yates/chip-8.ts/issues"
+	},
+	"homepage": "https://github.com/M-C-Yates/chip-8.ts#readme",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/jest": "^24.0.15",
+		"jest": "^24.8.0",
+		"ts-jest": "^24.0.2"
+	}
+}
