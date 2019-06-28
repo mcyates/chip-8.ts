@@ -78,8 +78,8 @@
         "signature": "768b21f964d6c270a740c8b26da6d11ff64246c8818902816e3a2d13a7594378"
       },
       "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts": {
-        "version": "510bfe6dbb6d5095467223fcc1be2ea980aa285d1882d2e8564ec6522bf57e83",
-        "signature": "89b3c0602d2133aff69b4f84673994b1708288a317b97d64509fe03cc190cfab"
+        "version": "543b5ae34c0ff500ef1056bb952d7188abf5e72e77fe08e1f35ff415257a5c44",
+        "signature": "4cc86bd7aedc228ddb8e136f8fc3e717005f9b8d5b6e90987c29ee674097222f"
       },
       "c:/webstuff/typescript/chip-8.ts/src/test/cpu.test.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -276,23 +276,15 @@
         [
           {
             "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
-            "start": 5449,
-            "length": 4,
+            "start": 946,
+            "length": 3,
             "code": 2339,
             "category": 1,
-            "messageText": "Property 'draw' does not exist on type 'Cpu'."
+            "messageText": "Property 'set' does not exist on type 'number[]'."
           },
           {
             "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
-            "start": 5703,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'pressed' does not exist on type 'Cpu'."
-          },
-          {
-            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
-            "start": 5897,
+            "start": 5885,
             "length": 38,
             "messageText": "Operator '<' cannot be applied to types 'boolean' and 'number'.",
             "category": 1,
@@ -300,11 +292,99 @@
           },
           {
             "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
-            "start": 5903,
-            "length": 7,
+            "start": 8002,
+            "length": 11,
+            "code": 2740,
+            "category": 1,
+            "messageText": "Type 'Uint8Array' is missing the following properties from type 'number[]': pop, push, concat, shift, and 3 more."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 8036,
+            "length": 9,
             "code": 2339,
             "category": 1,
-            "messageText": "Property 'pressed' does not exist on type 'Cpu'."
+            "messageText": "Property 'memBuffer' does not exist on type 'Cpu'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 8446,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 8551,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 8656,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 8761,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 8866,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 8971,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 9076,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 9181,
+            "length": 16,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'boolean' is not assignable to parameter of type 'boolean[]'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 9595,
+            "length": 8,
+            "messageText": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
+            "category": 1,
+            "code": 2362
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 9606,
+            "length": 5,
+            "messageText": "The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
+            "category": 1,
+            "code": 2363
           }
         ]
       ]

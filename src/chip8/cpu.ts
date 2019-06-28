@@ -5,8 +5,8 @@ export default class Cpu {
 	fontSet: Uint8Array = fontset;
 
 	i: number = 0x000;
-	memBuffer: ArrayBuffer = new ArrayBuffer(0x1000);
-	memory: Uint8Array = new Uint8Array(this.memBuffer);
+	// memBuffer: ArrayBuffer = new ArrayBuffer(0x1000);
+	memory: number[] = new Array(0x1000);
 	pc: number = 0x200;
 	pStart: number = 0x200;
 	stack: number[] = new Array(0x10);
@@ -274,5 +274,94 @@ export default class Cpu {
 		for (let i = 0; i < this.fontSet.length; i++) {
 			this.memory[i] = this.fontSet[i];
 		}
+	};
+
+	pressed = () => {
+		let pressed = [];
+		for (let i = 0; i < this.input.length; i++) {
+			if (this.input[i]) {
+				pressed.push(i);
+			}
+		}
+		return pressed;
+	};
+
+	reset = () => {
+		this.delayTimer = 0;
+		this.display = utils.setArray(new Array(0x800), false);
+		this.input = utils.setArray(new Array(16), false);
+		this.i = 0;
+		this.memory = new Uint8Array(this.memBuffer);
+		this.pc = 0x200;
+		this.soundTimer = 0;
+		this.sp = 0;
+		this.stack = new Array(0x10);
+		this.v = new Uint8Array(0x10);
+		this.paused = 0;
+		this.loadFont();
+	};
+
+	draw = (x: number, y: number, sprite: number[]) => {
+		let unset = 0;
+		for (let i = 0; i < sprite.length; i++) {
+			let val = sprite[i];
+			unset |= this.setPixel(
+				this.uint8(x + 0),
+				this.uint8(y + i),
+				(val & 0x80) > 0
+			);
+			unset |= this.setPixel(
+				this.uint8(x + 1),
+				this.uint8(y + i),
+				(val & 0x40) > 0
+			);
+			unset |= this.setPixel(
+				this.uint8(x + 2),
+				this.uint8(y + i),
+				(val & 0x20) > 0
+			);
+			unset |= this.setPixel(
+				this.uint8(x + 3),
+				this.uint8(y + i),
+				(val & 0x10) > 0
+			);
+			unset |= this.setPixel(
+				this.uint8(x + 4),
+				this.uint8(y + i),
+				(val & 0x08) > 0
+			);
+			unset |= this.setPixel(
+				this.uint8(x + 5),
+				this.uint8(y + i),
+				(val & 0x04) > 0
+			);
+			unset |= this.setPixel(
+				this.uint8(x + 6),
+				this.uint8(y + i),
+				(val & 0x02) > 0
+			);
+			unset |= this.setPixel(
+				this.uint8(x + 7),
+				this.uint8(y + i),
+				(val & 0x01) > 0
+			);
+		}
+		return unset ? 1 : 0;
+	};
+
+	setPixel = (x: number, y: number, state: boolean[]) => {
+		let width = this.displayWidth;
+		let height = this.displayHeight;
+
+		// wrap pixel around if it leaves border of screen;
+		if (x >= width || x < 0 || y >= height || y < 0) {
+			return;
+		}
+
+		let index = x + y * width;
+		let original = this.display[index];
+		this.display[index] = original ^ state ? true : false;
+		// this is probably wrong
+		return original && !this.display[index];
 	};
 }
