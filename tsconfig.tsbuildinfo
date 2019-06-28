@@ -73,9 +73,13 @@
         "version": "c2a9ef7c6cfa532e846cc616dec38c41d4ad03467e1d5a67a59ba7a36193b11b",
         "signature": "d1d0c1069d10da009feb5c010accfdb325cd218b2d0d09f55a300866f49f9de1"
       },
+      "c:/webstuff/typescript/chip-8.ts/src/utils/fontset.ts": {
+        "version": "9a52dbfdf07d4ed9885d04a8def29fd26ae115e27b2270be29ff2caf5386aaac",
+        "signature": "768b21f964d6c270a740c8b26da6d11ff64246c8818902816e3a2d13a7594378"
+      },
       "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts": {
-        "version": "9a468cf1757b3480d221471569b252f0bfaf8f1a8354f4824e6187d21b75aeaf",
-        "signature": "526cd2f1a663b00208ed53e571bb87b808ebd29bfd3cc1818cd566ede3cc18e4"
+        "version": "510bfe6dbb6d5095467223fcc1be2ea980aa285d1882d2e8564ec6522bf57e83",
+        "signature": "89b3c0602d2133aff69b4f84673994b1708288a317b97d64509fe03cc190cfab"
       },
       "c:/webstuff/typescript/chip-8.ts/src/test/cpu.test.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -157,7 +161,8 @@
     },
     "referencedMap": {
       "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts": [
-        "c:/webstuff/typescript/chip-8.ts/src/utils/utils.ts"
+        "c:/webstuff/typescript/chip-8.ts/src/utils/utils.ts",
+        "c:/webstuff/typescript/chip-8.ts/src/utils/fontset.ts"
       ],
       "c:/webstuff/typescript/chip-8.ts/node_modules/@types/babel__generator/index.d.ts": [
         "c:/webstuff/typescript/chip-8.ts/node_modules/@babel/types/lib/index.d.ts"
@@ -249,6 +254,7 @@
       "c:/users/marigi/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
       "c:/webstuff/typescript/chip-8.ts/src/index.ts",
       "c:/webstuff/typescript/chip-8.ts/src/utils/utils.ts",
+      "c:/webstuff/typescript/chip-8.ts/src/utils/fontset.ts",
       "c:/webstuff/typescript/chip-8.ts/src/test/cpu.test.ts",
       "c:/webstuff/typescript/chip-8.ts/node_modules/@babel/types/lib/index.d.ts",
       "c:/webstuff/typescript/chip-8.ts/node_modules/@types/babel__generator/index.d.ts",
@@ -265,7 +271,43 @@
       "c:/webstuff/typescript/chip-8.ts/node_modules/@types/jest/index.d.ts",
       "c:/webstuff/typescript/chip-8.ts/node_modules/@types/stack-utils/index.d.ts",
       "c:/webstuff/typescript/chip-8.ts/node_modules/@types/yargs/index.d.ts",
-      "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts"
+      [
+        "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+        [
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 5449,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'draw' does not exist on type 'Cpu'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 5703,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'pressed' does not exist on type 'Cpu'."
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 5897,
+            "length": 38,
+            "messageText": "Operator '<' cannot be applied to types 'boolean' and 'number'.",
+            "category": 1,
+            "code": 2365
+          },
+          {
+            "file": "c:/webstuff/typescript/chip-8.ts/src/chip8/cpu.ts",
+            "start": 5903,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'pressed' does not exist on type 'Cpu'."
+          }
+        ]
+      ]
     ]
   },
   "version": "3.5.1"
